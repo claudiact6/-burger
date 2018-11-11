@@ -1,0 +1,50 @@
+<div class="container mt-5 pt-3 pb-5">
+    <div class="row text-center">
+        <div class="col">
+            <h1>So many burgers!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-2"></div>
+        <div class="col col-4">
+            <h2>To eat</h2>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>{{this.burger_name}}</li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col col-2"></div>
+        <div class="col col-4">
+            <h2>Eaten</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                <li><del>{{this.burger_name}}</del></li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+    <div class="row text-center">
+        <div class="col">
+            <h2>What burger would you like to eat?</h2>
+            <p class="lead">Send in your suggestion</label>
+                <div class="row text-center">
+                    <div class="col col-3"></div>
+                    <form id="addburger"></form>
+                    <div class="col col-5">
+                        <input type="text" class="form-control" id="burgertype">
+                    </div>
+                    <div class="col col-1 pl-0">
+                        <button type="submit" class="btn" id="add">Add</button>
+                    </div>
+                    </form>
+                    <div class="col col-2"></div>
+                </div>
+        </div>
+    </div>
+</div>
