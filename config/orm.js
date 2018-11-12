@@ -13,9 +13,9 @@ var orm = {
             cb(data);
         });
     },
-    insertOne: function(table, column, value) {
-        var queryString = "INSERT INTO ?? (?) VALUES ?";
-        connection.query(querystring, [table, column, value], function(err, data) {
+    insertOne: function(table, column, value, cb) {
+        var queryString = "INSERT INTO ?? (??) VALUES (?)";
+        connection.query(queryString, [table, column, value], function(err, data) {
             if (err) throw err;
             cb(data);
         });

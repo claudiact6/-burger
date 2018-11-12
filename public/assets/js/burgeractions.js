@@ -1,8 +1,16 @@
 $(document).ready(function() {
-    $(document).on("submit", "#addburger", function() {
+    $("#add").on("click", function() {
         event.preventDefault();
-        var burger = $(this).val();
-        console.log(burger);
+        console.log("clicked");
+        var burger = $("#burgertype").val();
+        $.ajax("/api/burgers", {
+            type: "POST",
+            data: {
+                burger_name: burger
+            }
+        }).then(function() {
+            location.reload();
+        });
     });
 
 });

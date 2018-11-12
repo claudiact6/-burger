@@ -3,9 +3,14 @@ var express = require("express");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+var bodyParser = require("body-parser");
+
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+
+//parsing
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 
 //Set up Handlebars
 var exphbs = require("express-handlebars");
