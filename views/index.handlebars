@@ -8,13 +8,14 @@
         <div class="col col-2"></div>
         <div class="col col-4">
             <h2>To eat</h2>
-            <ul>
+                <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <li>{{this.burger_name}}</li>
+                <li class="burger"><span>{{this.burger_name}}</span><input class="edit" style="display: none;"></li>
                 {{/unless}}
                 {{/each}}
-            </ul>
+                </ul>
+            
         </div>
         <div class="col col-2"></div>
         <div class="col col-4">
