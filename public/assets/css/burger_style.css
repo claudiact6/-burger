@@ -15,3 +15,17 @@ h1, h2, h3 {
     background-color: #FFA235;
     color: white;
 }
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 1% 0;
+}
+
+.eat {
+    padding: 0 2%;
+    margin: 0 2%;
+}
