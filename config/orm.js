@@ -1,8 +1,3 @@
-/* * `selectAll()`
-* `insertOne()`
-* `updateOne()`
- */
-
 var connection = require("./connection");
 
 var orm = {

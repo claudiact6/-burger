@@ -4,13 +4,13 @@ var router = express.Router();
 var burger = require("../models/burger");
 
 router.get("/", function(req, res) {
-    /* burger.selectAll(function(data) {
+     burger.selectAll(function(data) {
         var hbsObject = {
           burgers: data
-        }; */
+        }; 
         res.render("index.handlebars", hbsObject);
       });
-// });
+ });
 
 router.post("/api/burgers", function(req, res) {
     console.log(req.body);
