@@ -5,7 +5,7 @@ var PORT = process.env.PORT || 3000;
 
 var bodyParser = require("body-parser");
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 
 //parsing
 app.use(bodyParser.urlencoded({ extended: true }));
