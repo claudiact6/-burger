@@ -22,7 +22,7 @@ router.post("/api/burgers", function(req, res) {
 router.put("/api/burgers", function(req, res) {
     console.log(req.body);
     burger.updateOne(req.body.colToUpdate, req.body.value, "id", req.body.id, function(result) {
-        res.json({ id: result.insertId });
+        console.log(result);
     });
 });
 
