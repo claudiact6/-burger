@@ -11,7 +11,7 @@
                 <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <li class="burger" id={{this.id}}><span>{{this.burger_name}}</span><button class="btn btn-primary eat"><i class="fas fa-check"></i></button><input class="edit form-control" style="display: none;"></li>
+                <li class="burger" id={{this.id}}><span>{{this.burger_name}}</span><button class="btn btn-primary eat"><i class="fas fa-check"></i></button><input id={{this.id}} class="edit form-control" style="display: none;"></li>
                 {{/unless}}
                 {{/each}}
                 </ul>
@@ -36,7 +36,7 @@
             <p class="lead">Send in your suggestion</label>
                 <div class="row text-center">
                     <div class="col col-3"></div>
-                    <form id="addburger"></form>
+                    <form id="addburger" action="submit"></form>
                     <div class="col col-5">
                         <input type="text" class="form-control" id="burgertype">
                     </div>
